@@ -17,10 +17,10 @@ const checkInput = event => {
   const inputElement = event.target;
   if (Number(inputElement.dataset.length) === inputElement.value.length) {
     inputElement.classList.add('valid');
+    inputElement.classList.remove('invalid');
   } else {
+    inputElement.classList.remove('valid');
     inputElement.classList.add('invalid');
   }
-  console.log(inputText.value.length);
-  console.log(Number(inputText.dataset.length));
 };
-inputText.addEventListener('blur', checkInput);
+inputText.addEventListener('change', checkInput);
