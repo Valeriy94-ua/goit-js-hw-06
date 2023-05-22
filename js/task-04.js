@@ -6,9 +6,9 @@ let counterValue = document.querySelector('#value');
 counterValue.textContent = 0;
 const btnIncrement = document.querySelector("[data-action='increment']");
 btnIncrement.addEventListener('click', () => {
-  counterValue.textContent = parseInt(counterValue.textContent) + 1;
+  counterValue.textContent = Number(counterValue.textContent) + 1;
 });
 const btnDecrement = document.querySelector("[data-action='decrement']");
 btnDecrement.addEventListener('click', () => {
-  counterValue.textContent = parseInt(counterValue.textContent) - 1;
+  counterValue.textContent = Number(counterValue.textContent) - 1;
 });
